@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_routing_management/routes/app_routes.dart';
 import 'package:go_router/go_router.dart';
 
 class ScreenA extends StatelessWidget {
@@ -10,14 +11,14 @@ class ScreenA extends StatelessWidget {
       appBar: AppBar(
         leading: InkWell(
           onTap: (){
-            context.go('/');
+            context.go(AppRouter.firstPage);
           },
             child: Icon(Icons.arrow_back)),
       ),
       body: Center(
         child: InkWell(
           onTap: (){
-            context.go('/second');
+            context.go(AppRouter.secondPage);
           },
             child: Text("First Screen. Tap to go 2nd Screen")),
       ),

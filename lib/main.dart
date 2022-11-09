@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_routing_management/routes/app_router.dart';
+import 'package:flutter_routing_management/routes/app_routes.dart';
 import 'package:go_router/go_router.dart';
 
 void main() {
@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){
-          context.go('/first');
+          context.go(AppRouter.firstPage);
         },
         tooltip: 'Increment',
         child: const Icon(Icons.add),
